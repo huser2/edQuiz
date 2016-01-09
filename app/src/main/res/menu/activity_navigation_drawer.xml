@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/maths"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Maths" />
+        <item
+            android:id="@+id/physics"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Physics" />
+        <item
+            android:id="@+id/chemistry"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Chemistry" />
+        <item
+            android:id="@+id/biology"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Biology" />
+    </group>
+
+
+</menu>
