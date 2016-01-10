@@ -32,24 +32,12 @@
         <activity
             android:name=".QuestionsActivity"
             android:label="@string/title_activity_questions"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".SpinnerActivity"
-            android:label="@string/title_activity_spinner"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ScrollingActivity"
-            android:label="@string/title_activity_scrolling"
-            android:parentActivityName=".NavigationActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".NavigationActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ext.techapp.edquiz.NavigationActivity" />
         </activity>
-        <activity
-            android:name=".com.ext.techapp.edquiz.questions.ScrollingActivity2"
-            android:label="@string/title_activity_scrolling2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

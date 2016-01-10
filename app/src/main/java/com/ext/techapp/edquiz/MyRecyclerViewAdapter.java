@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -24,11 +25,19 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
             .OnClickListener {
         TextView label;
         TextView dateTime;
+        RadioButton button1;
+        RadioButton button2;
+        RadioButton button3;
+        RadioButton button4;
 
         public DataObjectHolder(View itemView) {
             super(itemView);
-            label = (TextView) itemView.findViewById(R.id.textView);
-            dateTime = (TextView) itemView.findViewById(R.id.textView2);
+            label = (TextView) itemView.findViewById(R.id.question);
+            dateTime = (TextView) itemView.findViewById(R.id.answer);
+            button1 = (RadioButton)itemView.findViewById(R.id.radioButton);
+            button2 = (RadioButton)itemView.findViewById(R.id.radioButton2);
+            button3 = (RadioButton)itemView.findViewById(R.id.radioButton3);
+            button4 = (RadioButton)itemView.findViewById(R.id.radioButton4);
             Log.i(LOG_TAG, "Adding Listener");
             itemView.setOnClickListener(this);
         }
@@ -51,10 +60,10 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     @Override
     public DataObjectHolder onCreateViewHolder(ViewGroup parent,
                                                int viewType) {
-       // View view = LayoutInflater.from(parent.getContext())
-         //       .inflate(R.layout.card_view_row, parent, false);
+        View view = LayoutInflater.from(parent.getContext())
+               .inflate(R.layout.fragment_questions, parent, false);
 
-        DataObjectHolder dataObjectHolder = new DataObjectHolder(recyclerView);
+        DataObjectHolder dataObjectHolder = new DataObjectHolder(view);
         return dataObjectHolder;
     }
 
@@ -62,6 +71,10 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     public void onBindViewHolder(DataObjectHolder holder, int position) {
         holder.label.setText(mDataset.get(position).getmText1());
         holder.dateTime.setText(mDataset.get(position).getmText2());
+        holder.button1.setText("Ans 1");
+        holder.button2.setText("Ans 2");
+        holder.button3.setText("Ans 3");
+        holder.button4.setText("Ans 4");
     }
 
     public void addItem(DataObject dataObj, int index) {
